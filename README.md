@@ -1,7 +1,7 @@
 
 > **⚠️ It's made for my own personal use**  
 
-This repository contains a Python script (`main.py`) and a Windows executable (`main.exe`) that automate downloading and installing the required Visual C++ Redistributables (x86 & x64) and retrieving the game ZIP from my Google Drive.
+This repository contains a Python script (`main.py`) and a Windows executable (`main.exe`) that automate downloading and installing the required Visual C++ Redistributables (x86 & x64) and retrieving the game ZIP from my Google Drive and creates shortcuts.
 
 ## Table of Contents
 
@@ -17,9 +17,10 @@ This repository contains a Python script (`main.py`) and a Windows executable (`
 This project automates:  
 1. Downloading and silently installing the Visual C++ Redistributable (x86 and x64).  
 2. Downloading a ZIP file (`MP.zip`) from a private Google Drive link.  
-3. Extracting its contents into an `MP/` folder.  
-4. Providing a Windows executable (`main.exe`) for one-click installation.  
-5. Including the installer Python script (`main.py`) for those who prefer running via Python.
+3. Extracting its contents into an `MP/` folder.
+4. Creates shortcuts of the game  
+5. Providing a Windows executable (`main.exe`) for one-click installation.  
+6. Including the installer Python script (`main.py`) for those who prefer running via Python.
 
 ## Requirements
 
