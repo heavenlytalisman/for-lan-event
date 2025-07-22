@@ -49,7 +49,7 @@ pip install requests gdown
 
 ```bash
 git clone https://github.com/your-username/for-lan-event.git
-cd for-lan-even
+cd for-lan-event
 pip install requests gdown
 python main.py
 ```
