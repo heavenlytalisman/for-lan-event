@@ -68,5 +68,5 @@ python main.py
 
 ## Disclaimer
 
-- **It's made for my own personal use**;.  
+- **It's made for my own personal use**.  
 - **No Warranty**: Use at your own risk; the author is not responsible for any damage or data loss.
