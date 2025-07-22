@@ -48,8 +48,8 @@ pip install requests gdown
 ### Option 2: Python Script
 
 ```bash
-git clone https://github.com/your-username/mp-installer.git
-cd mp-installer
+git clone https://github.com/your-username/for-lan-event.git
+cd for-lan-even
 pip install requests gdown
 python main.py
 ```
