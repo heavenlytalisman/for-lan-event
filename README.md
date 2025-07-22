@@ -14,7 +14,7 @@ This repository contains a Python script (`main.py`) and a Windows executable (`
 
 ## Overview
 
-This project automates:  
+This script automates:  
 1. Downloading and silently installing the Visual C++ Redistributable (x86 and x64).  
 2. Downloading a ZIP file (`MP.zip`) from a private Google Drive link.  
 3. Extracting its contents into an `MP/` folder.
