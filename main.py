@@ -33,7 +33,7 @@ if subprocess.run([req2_name], shell=True):
     os.remove(req2_name)
 
 
-file_id = "1Fox-l7wnw_0CwPaQlphPm2J7tieSdELt"
+file_id = "1WiymAn2C4tGWxu5qBCHeLpvsshsZEvDe"
 gdrive_link = f"https://drive.google.com/uc?id={file_id}"
 
 filename = "MP.zip"
@@ -41,15 +41,15 @@ ex_folder = "MP"
 
 print("Downloading the game...")
 
-if (gdown.download(gdrive_link, filename, quiet=False)):
+if (gdown.download(gdrive_link, filename, quiet=False, use_cookies=True)):
     if not os.path.exists(ex_folder):
         os.mkdir(ex_folder)
 
-    with zipfile.ZipFile(filename, mode ="r") as zref:
-        zref.extractall(ex_folder)
-
-    os.remove(filename)
-    print("Done.")
+        with zipfile.ZipFile(filename, mode ="r") as zref:
+            zref.printdir()
+            zref.extractall(ex_folder)
+            os.remove(filename)
+            print("Done.")
 
 else:
     print("Error")
