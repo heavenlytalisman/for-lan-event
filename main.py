@@ -20,7 +20,8 @@ with open(req1_name, "wb") as f1:
         if chunk:
             f1.write(chunk)
 
-subprocess.run([req1_name], shell=True)
+if subprocess.run([req1_name], shell=True):
+    os.remove(req1_name)
 
 
 with open(req2_name, "wb") as f2:
@@ -28,24 +29,27 @@ with open(req2_name, "wb") as f2:
         if chunk:
             f2.write(chunk)
 
-subprocess.run([req2_name], shell=True)
+if subprocess.run([req2_name], shell=True):
+    os.remove(req2_name)
 
 
-gdrive_link = "https://drive.google.com/file/d/1Fox-l7wnw_0CwPaQlphPm2J7tieSdELt/view?usp=drive_link"
+file_id = "1Fox-l7wnw_0CwPaQlphPm2J7tieSdELt"
+gdrive_link = f"https://drive.google.com/uc?id={file_id}"
 
 filename = "MP.zip"
 ex_folder = "MP"
 
 print("Downloading the game...")
 
-gdown.download(gdrive_link, filename, quiet=False)
+if (gdown.download(gdrive_link, filename, quiet=False)):
+    if not os.path.exists(ex_folder):
+        os.mkdir(ex_folder)
 
-if not os.path.exists(ex_folder):
-    os.mkdir(ex_folder)
+    with zipfile.ZipFile(filename, mode ="r") as zref:
+        zref.extractall(ex_folder)
 
-with zipfile.ZipFile(filename, mode ="r") as zref:
-    zref.extractall(ex_folder)
+    os.remove(filename)
+    print("Done.")
 
-os.remove(filename)
-print("Done.")
-
+else:
+    print("Error")
